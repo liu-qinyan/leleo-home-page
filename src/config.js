@@ -15,13 +15,13 @@ const withBase = (path) => {
 const config = {
 	//网页元数据
 	metaData: {
-		title: 'Leleo的个人主页🎉',
-		description: '欢迎来到Leleo的奇妙世界！',
-		keywords: 'Leleo,leleo,个人主页,个人网站',
+		title: '柳卿烟的小窝🎉',
+		description: '欢迎来到柳卿烟的小窝！',
+		keywords: '柳卿烟,个人主页,个人网站',
 		icon: withBase('/favicon.ico')   //网页图标，支持外链
 	},
 	avatar: withBase("/img/avatar.jpg"), // 头像
-	welcometitle: "Hi, I'm Leleo", // 标题
+	welcometitle: "Hi, 我是柳卿烟", // 标题
 	// 颜色配置
 	color: {
 		themecolor: "#FFFFFF", // 主题颜色，推荐趋于亮白可带有轻微色调，例： #D1FFEC
@@ -68,10 +68,11 @@ const config = {
 	],
 	//打字机
 	typeWriterStrings: [
-		"如果你看到了这行字，说明我已经成功吸引到了你的注意力。",
-		"顶峰的少年，给了你所有细节，你却说我不是迪迦，给不了你想要的光。",
-		"心简单，世界就简单，幸福才会生长；心自由，生活就自由，到哪都有快乐。",
-		"生命太短，没有时间留给遗憾，若不是终点，请微笑一直向前。"
+		"今天也要元气满满哦～",
+		"做个快乐的小朋友",
+		"日子甜甜，好运连连",
+		"揣着一口袋开心满载而归",
+		"今天也是被治愈的一天"
 	],
 	//音乐播放配置，采用MetingJS Api(https://github.com/metowolf/MetingJS)
 	musicPlayer: {
@@ -149,6 +150,6 @@ const config = {
 		{ go: "💍 前往", img: withBase("/img/sunshine.jpg"), title: "Project 7", subtitle: "7,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 		{ go: "🔍 前往", img: withBase("/img/sunshine.jpg"), title: "Project 8", subtitle: "8,000 miles of wonder", text: "If you see this line, I've managed to get your attention.", url: "https://leleo.top", show: false },
 	],
-	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 Leleo"],
+	statement: ["备案号：XXICP备123456789号", "Copyright © 2025 柳卿烟"],
 }
 export default config
