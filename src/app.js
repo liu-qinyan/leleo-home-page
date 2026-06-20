@@ -91,11 +91,11 @@ export default {
         ];
         return new Promise((resolve, reject) => {
           const imagePromises = imageUrls.map((url) => {
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve) => {
                 const imgs = new Image();
                 imgs.src = url;
                 imgs.onload = () => resolve();
-                imgs.onerror = (err) => reject(err);
+                imgs.onerror = () => resolve(); // 图片加载失败也继续，不阻塞页面
             });
           })
 
@@ -113,7 +113,7 @@ export default {
               img.src = imageurl;
               // resolve() 函数通将一个 Promise 对象从未完成状态转变为已完成状态
               img.onload = () => {resolve();};
-              img.onerror = (err) => {reject(err);};
+              img.onerror = () => {resolve();}; // 背景图加载失败也继续显示页面
             }else{
               const video = this.$refs.VdPlayer;
               video.onloadedmetadata = () => {

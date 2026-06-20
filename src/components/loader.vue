@@ -1,6 +1,16 @@
 <template>
-<div class="spinner"></div>
-</template> 
+<div class="spinner" :style="{ '--loader-bg': `url(${baseUrl}img/loader.svg)` }"></div>
+</template>
+
+<script>
+export default {
+  computed: {
+    baseUrl() {
+      return import.meta.env.BASE_URL || '/';
+    }
+  }
+}
+</script>
 
 <style scoped>
 /* From Uiverse.io by Nawsome */ 
@@ -8,12 +18,10 @@
   transform: rotateX(60deg) rotateY(45deg) rotateZ(45deg);
   animation: 750ms rotateBefore infinite linear reverse;
 }
-
 .spinner:after {
   transform: rotateX(240deg) rotateY(45deg) rotateZ(45deg);
   animation: 750ms rotateAfter infinite linear;
 }
-
 .spinner:before,
 .spinner:after {
   box-sizing: border-box;
@@ -30,24 +38,21 @@
   perspective-origin: 50% 50%;
   perspective: 340px;
   background-size: 10em 10em;
-  background-image: url(/img/loader.svg);
+  background-image: var(--loader-bg);
 }
 /* sitNSpin.less */
 @keyframes rotateBefore {
   from {
     transform: rotateX(60deg) rotateY(45deg) rotateZ(0deg);
   }
-
   to {
     transform: rotateX(60deg) rotateY(45deg) rotateZ(-360deg);
   }
 }
-
 @keyframes rotateAfter {
   from {
     transform: rotateX(240deg) rotateY(45deg) rotateZ(0deg);
   }
-
   to {
     transform: rotateX(240deg) rotateY(45deg) rotateZ(360deg);
   }
